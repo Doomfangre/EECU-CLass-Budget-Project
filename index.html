@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Calculator - EECU</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -17,29 +18,29 @@
         <li class="listItem">Monthly Income <img src="sources/Info.png"></li>
         <li class="listItem">Total Monthly Income</li>
     </ul>
-    <!--Drop downs (seloect) might not be necessary based off how the fetch() attribut works-->
+    <!--Drop downs (select) might not be necessary based off how the fetch() attribut works-->
 
     <h2>Automatic Deduction</h2>
     <ul class="Lists" id="autoDeduction">
         <li class="listItem">
             Medicare
             <small class="taxInfo">Deduction: 1.45%</small>
-            <p class="calculation">$</p>
+            <p class="calculation">$<input id="expenseInput1"></p>
         </li>
         <li class="listItem">Social Security
             <small class="taxInfo">Deduction: 6.2%</small>
-            <p class="calculation">$</p>
+            <p class="calculation">$<input id="expenseInput2"></p>
         </li>
         <li class="listItem">Federal Income Tax
             <small class="taxInfo">Deduction: Varies</small>
-            <p class="calculation">$</p>
+            <p class="calculation">$<input id="expenseInput3"></p>
         </li>
         <li class="listItem">State Tax
             <small class="taxInfo">Deduction: 4%</small>
-            <p class="calculation">$</p>
+            <p class="calculation">$<input id="expenseInput4"></p>
         </li>
-        <li class="listItem">Total Income(After Tax)</li>
-        <p class="calculation">$</p>
+        <li class="listItem">Total Income(After Tax)</li>                       
+        <p class="calculation"><p id="outcome"></p>
     </ul>
     <!-- When you do JavaScipt, add something that shows the amount of money calculated (near the $)--> 
 
@@ -47,11 +48,11 @@
 
     <h2>Part 2 - Expenses</h2>
     <ul class="Lists" id="expensesList">
-    <li>Student Loans <img src="sources/Info.png">$<input class="expenseInput"></li>
-    <li>Housing Expenses <img src="sources/Info.png">$<input class="expenseInput"></li>
-    <li>Essentials<img src="sources/Info.png">$<input class="expenseInput"></li>
-    <li>Lifestyle<img src="sources/Info.png">$<input class="expenseInput"></li>
-    <li>Future-Proofing <img src="sources/Info.png">$<input class="expenseInput"></li>
+    <li>Student Loans <img src="sources/Info.png">$</li>
+    <li>Housing Expenses <img src="sources/Info.png"></li>
+    <li>Essentials<img src="sources/Info.png">$</li>
+    <li>Lifestyle<img src="sources/Info.png">$</li>
+    <li>Future-Proofing <img src="sources/Info.png">$</li>
     <li>Total Monthly Expenses <p id="MonthlyExpense">$</p></li>
     </ul>
 
@@ -65,5 +66,6 @@
         <img src="sources/eecu logo.png">
     </footer>
     <!-- might not be necessary to have a footer. feel free to change the p's to a's or anything otherwise -->
+<script src="script.js"></script>
 </body>
 </html>
